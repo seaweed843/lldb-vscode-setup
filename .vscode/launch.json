@@ -1,0 +1,34 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        // {
+        //     "name": "lldb-mi-debug===g++20 Build active file",
+        //     "type": "cppdbg",
+        //     "request": "launch",
+        //     "program": "${fileDirname}/${fileBasenameNoExtension}",
+        //     "args": [],
+        //     "stopAtEntry": true, // default:false,
+        //     "cwd": "${workspaceFolder}",
+        //     "environment": [],
+        //     "externalConsole": false,// default:false,
+        //     "MIMode": "lldb",//"gdb",
+        //     "preLaunchTask": "C/C++: g++20 build active file", //to build the file first, then debug, must match with the label in tasks.json 
+        //    // "miDebuggerPath": "/usr/bin/lldb" //"/usr/local/bin/gdb"
+        // }
+        
+        {
+            "name": "lldb-vscode-debug===clang++20 Build active file",
+            "type": "lldb-vscode",
+            "request": "launch",
+            "program": "${fileDirname}/clang20-${fileBasenameNoExtension}",
+            "args": ["one", "two", "three"],
+            "stopOnEntry": true, // default:false,
+            "cwd": "${workspaceFolder}",
+            "env": [],
+            "preLaunchTask": "llvm clang++20 build active file", //to build the file first, then debug, must match with the label in tasks.json 
+        }
+    ]
+}
